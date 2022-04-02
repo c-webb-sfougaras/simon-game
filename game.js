@@ -1,7 +1,6 @@
-// alert("hello")
-const express = require("express")
+
 let gamePattern = [];
-const app = express()
+
 let userClickedPattern = [];
 
 let level = 0;
@@ -91,20 +90,8 @@ function checkAnswer(userSelected) {
   }
 }
 
-app.get("/", function(req, res){
-  res.send(index.html)
-})
-
 function startOver() {
   level = 0;
   gamePattern = [];
 }
 
-let port = process.env.PORT;
-if (port == null|| port ==""){
-  port = 3000
-}
-
-app.listen(port, function(){
-  console.log("Server started successfully")
-})
