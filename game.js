@@ -91,6 +91,10 @@ function checkAnswer(userSelected) {
   }
 }
 
+app.get("/", function(req, res){
+  res.send(index.html)
+})
+
 function startOver() {
   level = 0;
   gamePattern = [];
